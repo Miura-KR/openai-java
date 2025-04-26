@@ -1,6 +1,8 @@
 ![Maven Central](https://img.shields.io/maven-central/v/com.theokanning.openai-gpt3-java/client?color=blue)
 
-> ⚠️ Please switch to using the new 'service' library if you need to use OpenAiService. The old 'client' OpenAiService is deprecated as of 0.10.0.  
+> ⚠️ Notice: This project is no longer maintained and has been archived as of June 6th, 2024.
+Thank you to everyone who has contributed and supported this project. While the repository will remain available in its current state, no further updates or support will be provided. Please feel free to fork and modify the code as needed.
+
 > ⚠️OpenAI has deprecated all Engine-based APIs. See [Deprecated Endpoints](https://github.com/TheoKanning/openai-java#deprecated-endpoints) below for more info.
 
 # OpenAI-Java
@@ -19,13 +21,16 @@ as well as an example project using the service.
 - [Chat Completions](https://platform.openai.com/docs/api-reference/chat/create)
 - [Edits](https://platform.openai.com/docs/api-reference/edits)
 - [Embeddings](https://platform.openai.com/docs/api-reference/embeddings)
+- [Audio](https://platform.openai.com/docs/api-reference/audio)
 - [Files](https://platform.openai.com/docs/api-reference/files)
-- [Fine-tunes](https://platform.openai.com/docs/api-reference/fine-tunes)
+- [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)
 - [Images](https://platform.openai.com/docs/api-reference/images)
 - [Moderations](https://platform.openai.com/docs/api-reference/moderations)
+- [Assistants](https://platform.openai.com/docs/api-reference/assistants)
 
 #### Deprecated by OpenAI
 - [Engines](https://platform.openai.com/docs/api-reference/engines)
+- [Legacy Fine-Tunes](https://platform.openai.com/docs/guides/legacy-fine-tuning)
 
 ## Importing
 
@@ -59,7 +64,7 @@ If you're looking for the fastest solution, import the `service` module and use 
 OpenAiService service = new OpenAiService("your_token");
 CompletionRequest completionRequest = CompletionRequest.builder()
         .prompt("Somebody once told me the world is gonna roll me")
-        .model("ada")
+        .model("babbage-002"")
         .echo(true)
         .build();
 service.createCompletion(completionRequest).getChoices().forEach(System.out::println);

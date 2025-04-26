@@ -23,10 +23,9 @@ public class ModelTest {
 
     @Test
     void getModel() {
-        Model ada = service.getModel("ada");
+        Model model = service.getModel("babbage-002");
 
-        assertEquals("ada", ada.id);
-        assertEquals("openai", ada.ownedBy);
-        assertFalse(ada.permission.isEmpty());
+        assertEquals("babbage-002", model.id);
+        assertEquals("system", model.ownedBy);
     }
 }
